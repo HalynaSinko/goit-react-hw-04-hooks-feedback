@@ -12,9 +12,8 @@ export default function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const handleFeedback = ({ target }) => {
-    const { raiting } = target.dataset;
-    switch (raiting) {
+  const handleFeedback = (feedbackName) => {
+    switch (feedbackName) {
       case "good":
         setGood((prevGood) => prevGood + 1);
         break;

@@ -6,8 +6,9 @@ const FeedbackBtn = ({ feedbackName, onLeaveFeedback }) => (
     key={feedbackName}
     className={s.button}
     type="button"
-    data-raiting={feedbackName}
-    onClick={onLeaveFeedback}
+    onClick={() => {
+      onLeaveFeedback(feedbackName);
+    }}
   >
     {feedbackName}
   </button>
